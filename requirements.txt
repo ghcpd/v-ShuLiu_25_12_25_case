@@ -1,0 +1,4 @@
+pydantic>=1.10,<2
+pytest>=7.0
+# optional adapters
+minio>=7.0  # optional for real MinIO integration
