@@ -1,0 +1,57 @@
+[
+  {
+    "label": "基线请求-画图",
+    "module": "MVB",
+    "requestType": "plot",
+    "configVersion": "v1",
+    "timeStart": "2025-12-25T08:00:00Z",
+    "timeEnd": "2025-12-25T09:00:00Z",
+    "timeStep": "1s",
+    "trainNo": "G1234",
+    "carriage": "01"
+  },
+  {
+    "label": "仅差timeStep-应不命中",
+    "module": "MVB",
+    "requestType": "plot",
+    "configVersion": "v1",
+    "timeStart": "2025-12-25T08:00:00Z",
+    "timeEnd": "2025-12-25T09:00:00Z",
+    "timeStep": "2s",
+    "trainNo": "G1234",
+    "carriage": "01"
+  },
+  {
+    "label": "不同接口（由requestType映射）-必须隔离",
+    "module": "MVB",
+    "requestType": "download",
+    "configVersion": "v1",
+    "timeStart": "2025-12-25T08:00:00Z",
+    "timeEnd": "2025-12-25T09:00:00Z",
+    "timeStep": "1s",
+    "trainNo": "G1234",
+    "carriage": "01"
+  },
+  {
+    "label": "不同module-必须隔离",
+    "module": "PHM",
+    "requestType": "plot",
+    "configVersion": "v1",
+    "timeStart": "2025-12-25T08:00:00Z",
+    "timeEnd": "2025-12-25T09:00:00Z",
+    "timeStep": "1s",
+    "trainNo": "G1234",
+    "carriage": "01"
+  },
+  {
+    "label": "配置版本变化-旧缓存失效",
+    "module": "MVB",
+    "requestType": "plot",
+    "configVersion": "v2",
+    "timeStart": "2025-12-25T08:00:00Z",
+    "timeEnd": "2025-12-25T09:00:00Z",
+    "timeStep": "1s",
+    "trainNo": "G1234",
+    "carriage": "01"
+  }
+]
