@@ -1,0 +1,17 @@
+{
+  "version": "v2",
+  "module": "MVB",
+  "parser_version": "2.0.0",
+  "byte_order": "little",
+  "parse_mode": "advanced",
+  "signal_map": {
+    "speed": {"offset": 0, "length": 4, "scale": 0.01, "unit": "m/s"},
+    "temp": {"offset": 4, "length": 2, "scale": 0.1, "unit": "°C"},
+    "pressure": {"offset": 6, "length": 2, "scale": 0.5, "unit": "bar"}
+  },
+  "second_parse": {
+    "plot_metrics": ["speed_avg", "speed_max", "temp_max", "pressure_avg"],
+    "downsample": {"method": "mean", "step": 20},
+    "filtering": {"window": 5, "method": "moving_average"}
+  }
+}

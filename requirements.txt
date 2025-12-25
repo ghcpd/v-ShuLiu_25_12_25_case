@@ -1,0 +1,13 @@
+# Core dependencies
+# (Python version is managed by the environment; do not list here)
+
+# Optional: For MinIO support (uncomment to use)
+# minio==7.1.17
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-timeout==2.2.0
+
+# Utilities
+python-dotenv==1.0.0
